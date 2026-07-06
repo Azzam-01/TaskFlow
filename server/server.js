@@ -17,11 +17,13 @@ const app = express();
    CORS CONFIG (FIXED)
 ========================= */
 app.use(cors({
-  origin: "https://task-flow-ruby-nu.vercel.app",
+  origin: [
+    "http://localhost:5173",
+    "https://task-flow-ruby-nu.vercel.app"
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
-
 /* =========================
    MIDDLEWARE
 ========================= */

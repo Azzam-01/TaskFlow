@@ -39,6 +39,13 @@ const startServer = async () => {
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
+  import cors from "cors";
+
+app.use(cors({
+  origin: "https://task-flow-ruby-nu.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 };
 
 startServer();
